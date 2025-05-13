@@ -1,17 +1,15 @@
-def xoa_phan_tu(dictionary, key):
-    if key in dictionary:
-        del dictionary[key]
-        return True
+def xoa_phan_tu(dic, key):
+    """
+    Xóa phần tử trong dictionary theo key
+    :param dic: dictionary
+    :param key: key cần xóa
+    :return: None
+    """
+    if key in dic:
+        del dic[key]
     else:
-        return False
-
-# Sử dụng hàm và in kết quả
-my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-key_to_delete = 'b'
-
-result = xoa_phan_tu(my_dict, key_to_delete)
-
-if result:
-    print("Phần tử đã được xóa từ Dictionary:", my_dict)
-else:
-    print("Không tìm thấy phần tử cần xóa trong Dictionary.")
+        print(f"Key '{key}' không tồn tại trong dictionary.")
+        
+dic = {'a': 1, 'b': 2, 'c': 3}
+xoa_phan_tu(dic, 'b')
+print(dic)  # {'a': 1, 'c': 3}
