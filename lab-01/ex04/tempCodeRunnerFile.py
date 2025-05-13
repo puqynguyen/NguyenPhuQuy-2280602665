@@ -1,0 +1,1 @@
+choice = int(input("Nhập lựa chọn của bạn: "))
